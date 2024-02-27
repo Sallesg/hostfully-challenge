@@ -11,9 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-.test
-.husky
 src/node_modules
+.test/tests/unit/src
 
 # Editor directories and files
 .vscode/*
