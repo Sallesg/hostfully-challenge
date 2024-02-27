@@ -4,7 +4,6 @@ import { DatePicker } from '../DatePicker/DatePicker';
 import {
   FormWrapper,
   InputWrapper,
-  ErrorText,
   Title,
   Button,
   ButtonWrapper,

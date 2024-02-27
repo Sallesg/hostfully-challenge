@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-
 import { Booked } from './Booked';
 import { EventProvider } from '@app/contexts/EventContext/EventContext';
 import theme from '@views/styles/theme';
