@@ -21,6 +21,9 @@ export const WrapperProperty = styled.div`
 
 export const ImagesSlot = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const MainFigure = styled.div`
@@ -31,6 +34,12 @@ export const MainFigure = styled.div`
 
   img {
     border-top-left-radius: 12px;
+    @media (max-width: 768px) {
+      border-radius: 12px;
+    }
+  }
+  @media (max-width: 768px) {
+    margin-right: 0px;
   }
 `;
 
@@ -38,11 +47,17 @@ export const Figures = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
   figure {
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @media (max-width: 768px) {
+        border-radius: 12px;
+      }
     }
   }
 `;

@@ -7,7 +7,6 @@ import {
 
 export const Booked = () => {
   const { bookedEvents } = useEventContext();
-  console.log({ bookedEvents });
   return (
     <BookedWrapper>
       <Title>Booked</Title>

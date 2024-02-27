@@ -21,14 +21,11 @@ export const EventBookingForm: React.FC = () => {
   const [validationSteps, setValidationSteps] = useState(0);
 
   const handlecheckInChange = (date: Date) => {
-    console.log('handlecheckInChange:', date);
     setCheckIn(date);
     setValidationSteps(date && checkOut ? 2 : 1);
   };
 
   const handlecheckOutChange = (date: Date) => {
-    console.log('handlecheckOutChange:', date);
-
     setCheckOut(date);
     setValidationSteps(checkIn && date ? 2 : checkIn && date ? 2 : 1);
   };
@@ -74,7 +71,7 @@ export const EventBookingForm: React.FC = () => {
         </PriceText>
         <div>
           <InputWrapper>
-            <label>Start Date</label>
+            <label>Check In</label>
             <DatePicker
               selectedDate={checkIn}
               onDateChange={handlecheckInChange}
@@ -82,7 +79,7 @@ export const EventBookingForm: React.FC = () => {
             />
           </InputWrapper>
           <InputWrapper>
-            <label>End Date</label>
+            <label>Check Out</label>
             <DatePicker
               selectedDate={checkOut}
               onDateChange={handlecheckOutChange}

@@ -7,6 +7,11 @@ export const BookedWrapper = styled.div`
   background-color: #2b2e41;
   text-align: center;
   padding: 3%;
+  @media (max-width: 768px) {
+    width: 100%;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 `;
 
 export const Title = styled.h2`

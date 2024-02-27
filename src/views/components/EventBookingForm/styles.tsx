@@ -10,6 +10,12 @@ export const FormWrapper = styled.div`
   border-bottom-left-radius: 12px;
   justify-content: space-between;
   align-items: space-between;
+  @media (max-width: 768px) {
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 0px;
+  }
 
   form {
     height: 80%;
@@ -99,4 +105,6 @@ export const FillBar = styled.div<{ steps: number }>`
   margin-top: -4px;
 `;
 
-export const PriceText = styled.div``;
+export const PriceText = styled.div`
+  margin-bottom: 14px;
+`;

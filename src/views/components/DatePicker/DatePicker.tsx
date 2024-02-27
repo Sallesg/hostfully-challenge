@@ -13,16 +13,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({
 }) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    console.log('VALUE:', value);
-
-    // Parse input date and format it with date-fns
     const date = parseISO(value);
-    console.log('date:', date);
-
     onDateChange(date);
   };
 
-  // Format dates using date-fns format function
   const formattedSelectedDate = selectedDate
     ? format(selectedDate, 'yyyy-MM-dd')
     : '';
