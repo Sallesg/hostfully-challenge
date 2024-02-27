@@ -16,13 +16,11 @@ describe('Booking', () => {
   renderComponent();
 
   it('Should be render the Booking page', () => {
-    // Ensure Property component is rendered
     const propertyElement = screen.getByRole('heading', {
       name: /Bungalow Sol/i,
     });
     expect(propertyElement).toBeInTheDocument();
 
-    // Ensure Booked component is rendered
     const bookedElement = screen.getByRole('heading', { name: /Booked/i });
     expect(bookedElement).toBeInTheDocument();
   });

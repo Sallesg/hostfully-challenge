@@ -1,0 +1,8 @@
+- Change edit for the same component responbible for schedule the book stay.
+- Fix it styled components iconColor
+- Improve routes to dinamically
+- Property create a folder repository
+-- Create a hook useProperty: has access a mocked data -- DOMAIN DRIVEN DESIGN
+
+- Tests:
+-- Booked: update the test related to have booked data from user insert

@@ -24,6 +24,7 @@ describe('Booked component', () => {
   });
 
   it('renders booked events when there are booked events', () => {
+    // TODO: UPDATE THIS TEST
     const bookedEvents = [
       {
         id: '1',
@@ -50,10 +51,8 @@ describe('Booked component', () => {
       </ThemeProvider>,
     );
 
-    // Check if "Booked" title is present
     expect(getByText('Booked')).toBeInTheDocument();
 
-    // Check if each booked event is rendered
     bookedEvents.forEach((event) => {
       expect(queryByText(`Booking ID: ${event.id}`)).toBe(null);
     });

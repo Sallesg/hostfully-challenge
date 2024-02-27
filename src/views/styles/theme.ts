@@ -45,16 +45,3 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
 `;
-
-// font-family: "Roboto", sans-serif;
-// max-width: 1360px;
-// #FFC454
-//#19172A75
-// #C2C2C2
-// #FFFFFF
-// #8A5BDA
-// #FF7254
-// #777777
-// #40CAA1
-// #2D2AA5
-// #19172A

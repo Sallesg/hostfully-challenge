@@ -25,7 +25,7 @@ const Input = styled.input`
 `;
 
 interface BookedCardProps {
-  booking: IBooking; // Define the prop type
+  booking: IBooking;
 }
 
 export const BookedCard: React.FC<BookedCardProps> = ({ booking }) => {
@@ -60,7 +60,7 @@ export const BookedCard: React.FC<BookedCardProps> = ({ booking }) => {
 
   const handleSaveClick = () => {
     if (editedEvent && editedEvent.id) {
-      updateBooking(editedEvent.id, editedEvent); // Update the booking with the edited event data
+      updateBooking(editedEvent.id, editedEvent);
       setIsEditing(false);
     }
   };

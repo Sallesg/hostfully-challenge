@@ -24,7 +24,6 @@ describe('BookedCard', () => {
   };
 
   beforeEach(() => {
-    // Mock context functions
     (useEventContext as Mock).mockReturnValue(mockContextValue);
   });
 
@@ -35,6 +34,7 @@ describe('BookedCard', () => {
     expect(screen.getByText('Total Price:')).toBeInTheDocument();
     expect(screen.getByText(/03\/01\/2024/)).toBeInTheDocument();
     expect(screen.getByText(/03\/05\/2024/)).toBeInTheDocument();
+    // TODO: Update this test
     expect(screen.getByText('100')).toBeInTheDocument();
   });
 
@@ -55,6 +55,7 @@ describe('BookedCard', () => {
     const saveButton = screen.getByRole('button-save');
     fireEvent.click(saveButton);
 
+    // TODO: VERIFY INPUT DATE VALUES
     const confirmEdit = screen.getByRole('button-confirm-edit');
     expect(confirmEdit).toBeInTheDocument();
   });

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { DatePicker } from './DatePicker';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest'; // Assuming DatePicker component is in the same directory
+import { describe, expect, it, vi } from 'vitest';
 
 describe('DatePicker', () => {
   it('should call onDateChange with the selected date when input changes', () => {

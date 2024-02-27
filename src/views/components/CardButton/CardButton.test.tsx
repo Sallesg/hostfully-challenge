@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { CardButton } from './CardButton'; // Import the CardButton component
+import { CardButton } from './CardButton';
 describe('CardButton', () => {
   it('should render button with icon and apply styles correctly', () => {
     const onClickMock = vi.fn();
@@ -26,15 +26,12 @@ describe('CardButton', () => {
     expect(button).toHaveStyle(`cursor: pointer`);
     expect(button).toHaveStyle(`margin: 0 8px`);
 
-    // Simulate hover and verify hover style
     fireEvent.mouseEnter(button);
     expect(button).toHaveStyle(`color: ${iconHoverColor}`);
 
-    // Simulate mouse leave and verify style revert
     fireEvent.mouseLeave(button);
     expect(button).toHaveStyle(`color: ${iconColor}`);
 
-    // Verify that onClick function is called when button is clicked
     fireEvent.click(button);
     expect(onClickMock).toHaveBeenCalled();
   });

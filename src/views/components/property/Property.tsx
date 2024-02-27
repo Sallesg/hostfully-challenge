@@ -18,6 +18,7 @@ interface PropertyTemplateProps {
   extraInfo: string;
 }
 
+// TODO: Create a file to this MOCK
 export const propertyData: PropertyTemplateProps = {
   images: [
     'https://a0.muscache.com/im/pictures/miso/Hosting-777608750459748865/original/45ab063c-2a7d-4a92-9484-361ef9202e33.jpeg?im_w=1200',

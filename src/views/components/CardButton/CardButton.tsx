@@ -9,19 +9,19 @@ interface CardButtonProps {
 }
 
 type CardButtonStyled = {
-  iconColor: string;
-  iconHoverColor: string;
+  $iconColor: string;
+  $iconHoverColor: string;
 };
 
 const CardButtonStyled = styled.button<CardButtonStyled>`
-  color: ${({ iconColor }) => iconColor};
+  color: ${({ $iconColor }) => $iconColor};
   background-color: transparent;
   border: none;
   padding: 4px;
   cursor: pointer;
   margin: 0 8px;
   &:hover {
-    color: ${({ iconHoverColor }) => iconHoverColor};
+    color: ${({ $iconHoverColor }) => $iconHoverColor};
   }
 `;
 
@@ -36,8 +36,8 @@ export const CardButton: React.FC<CardButtonProps> = ({
     <CardButtonStyled
       role={role}
       onClick={onClick}
-      iconColor={iconColor}
-      iconHoverColor={iconHoverColor}
+      $iconColor={iconColor}
+      $iconHoverColor={iconHoverColor}
     >
       {icon}
     </CardButtonStyled>

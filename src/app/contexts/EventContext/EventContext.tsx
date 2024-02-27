@@ -1,7 +1,6 @@
 import { calculateTotalPrice } from '@app/utils/calculatePrice';
 import React, { ReactNode, createContext, useContext, useReducer } from 'react';
 
-// Define the shape of the Event object
 export interface IBooking {
   id: string;
   checkIn: Date | string;
@@ -10,7 +9,6 @@ export interface IBooking {
   completed: boolean;
 }
 
-// Define the actions for the reducer
 type Action =
   | { type: 'ADD_BOOKING'; booking: IBooking }
   | { type: 'UPDATE_BOOKING'; id: string; booking: IBooking }
@@ -31,10 +29,8 @@ const reducer = (state: IBooking[], action: Action): IBooking[] => {
   }
 };
 
-// Define the function type to check for event conflicts
 export type isEventConflict = (event: IBooking) => boolean;
 
-// Define the shape of the context
 export interface EventContextType {
   bookedEvents: IBooking[];
   addBooking: (booking: IBooking) => void;
@@ -46,7 +42,6 @@ export interface EventContextType {
 
 const EventContext = createContext<EventContextType | undefined>(undefined);
 
-// Create a custom hook to consume the context
 export const useEventContext = () => {
   const context = useContext(EventContext);
   if (!context) {
@@ -59,10 +54,10 @@ export const EventProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [bookedEvents, dispatch] = useReducer(reducer, []);
-  const PricePerDay = 145; // Price per day
+  const PricePerDay = 145;
   const addBooking = (booking: IBooking) => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Set hours, minutes, seconds, and milliseconds to 0 for comparison
+    today.setHours(0, 0, 0, 0);
     if (booking.checkIn < today) {
       throw new Error("You can't schedule a booking for past dates.");
     }
