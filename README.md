@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+# Project Name: Hostfully Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## technologies used and why:
 
-Currently, two official plugins are available:
+- [Vite](https://vitejs.dev/guide/): Lightning-fast dev server, optimized builds, seamless HMR, minimal config, modern ecosystem integration. Boost your development speed.
+- [SWC](https://swc.rs/): compiles JavaScript rapidly by leveraging Rust's speed and parallelism, optimizing code for performance.
+- [Husky](https://typicode.github.io/husky/get-started.html): set up to run linting, formatting, and tests before each commit, ensuring that only properly formatted and tested code gets committed.
+- [EditorConfig](https://editorconfig.org/): used to maintain consistent coding styles across different editors.
+- [Prettier](https://prettier.io/)/[ESLint](https://eslint.org/): work together to enforce code formatting and best practices.
+- [Styled-Components](https://styled-components.com/): easy and maintainable styling solutions for React components.
+- [Vitest](https://vitest.dev/guide/): provides a simple and fast testing environment for your components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### architecture:
 
-## Expanding the ESLint configuration
+- Component-based: Is an approach to software design where the system is built by mounting independent, reusable components that encapsulate specific functionality or visual elements.
+- separation of concerns (SoC): is a design principle that dividing a software system into distinct sections, with each responsible for a specific aspect of functionality.
+- test-driven development (TDD): a software development approach where tests are written before writing the actual code.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Folder architecture:
 
-- Configure the top-level `parserOptions` property like this:
+1 _src:_ This is the main folder where the source code resides.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- _app:_ Contains code related to the core functionality of application.
+
+  - contexts: This folder contains React context providers and related logic for managing global state.
+  - hooks: custom React hooks that provide reusable pieces of logic for a components.
+  - router: related to routing in application.
+  - utils: Contains utility functions and helper methods that are used across application.
+
+- _views:_ Contains code related to the visual representation of application.
+  - components: This folder contains reusable UI components that are used across multiple pages or sections.
+  - pages: represent different pages or views. Each page component typically corresponds to a specific route.
+  - styles: CSS-in-JS files that provide styling for components and pages.
+
+## Getting Started:
+
+1. Clone this repository to your local machine:
+
+   ```bash
+       git clone https://github.com/Sallesg/hostfully-challenge.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+       cd hostfully-challenge
+   ```
+
+3. Install dependencies:
+
+   ```bash
+       yarn install
+   ```
+
+## Available Scripts
+
+In the project directory, you can run the following scripts:
+
+#### Development Server
+
+```bash
+    yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Open http://localhost:5173 to view it in the browser.
+
+#### Testing
+
+Launches the test runner:
+
+```bash
+    yarn test
+```
+
+```bash
+    yarn test:coverage
+```
+
+#### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
