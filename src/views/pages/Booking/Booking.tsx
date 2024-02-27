@@ -1,17 +1,19 @@
-import { EventCalendar } from '@views/components/EventCalendar/EventCalendar';
-import { subDays } from 'date-fns';
+import { Booked } from '@views/components/Booked/Booked';
+import { Wrapper, WrapperBooking } from './styles.tsx';
+import { EventBookingForm } from '@views/components/EventBookingForm/EventBookingForm.tsx';
+import { EventProvider } from '@app/contexts/EventContext/EventContext.tsx';
+import { Property } from '@views/components/property/Property.tsx';
 
 export const Booking = () => {
   return (
-    <div>
-      <h2>Booking</h2>
-      <EventCalendar
-        events={[
-          { date: subDays(new Date(), 1), title: 'Yesterday' },
-          { date: new Date(), title: 'Today' },
-          { date: subDays(new Date(), -1), title: 'Tomorrow' },
-        ]}
-      />
-    </div>
+    <EventProvider>
+      <Wrapper>
+        <Property />
+        <WrapperBooking>
+          <EventBookingForm />
+          <Booked />
+        </WrapperBooking>
+      </Wrapper>
+    </EventProvider>
   );
 };

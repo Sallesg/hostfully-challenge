@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import { Booking } from "@views/pages/Booking/Booking";
+import { Routes, Route } from 'react-router-dom';
+import { Booking } from '@views/pages/Booking/Booking';
 
 export const Router = () => {
   return (
