@@ -9,6 +9,7 @@
 - [Prettier](https://prettier.io/)/[ESLint](https://eslint.org/): work together to enforce code formatting and best practices.
 - [Styled-Components](https://styled-components.com/): easy and maintainable styling solutions for React components.
 - [Vitest](https://vitest.dev/guide/): provides a simple and fast testing environment for your components.
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary): guidelines for structuring commit messages in a consistent and standardized format.
 
 ### architecture:
 
